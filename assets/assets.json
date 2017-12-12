@@ -1,0 +1,7 @@
+{
+    "spritePaths": {
+        "10": "assets/pngs/world/10.json",
+        "20": "assets/pngs/world/20.json",
+        "30": "assets/pngs/world/30.json"
+    }
+}

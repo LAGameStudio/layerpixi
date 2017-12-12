@@ -10,7 +10,7 @@ let exec = require('child_process').exec
 var shell = require('shelljs')
 
 let fileName = "samidle1"
-let fileDim = 60
+let fileDim = 10
 
 let dirPath = "./assets/voxes/"
 let voxes = []
@@ -82,25 +82,38 @@ function createPNGs(){
 
 function createAtlases(){
 	let program = []
-	let pngInfo
+	let assets = {}
 
 	for(let i = 0; i < voxes.length; i++){
-		
+		let pngInfo
 
 		let pngDir = pngSaveDirectories[i].replace(/\\\\/g, "/")
 		let pngName = voxFileNames[i].replace(".vox", ".png")
 
-
 		program.push(
 			new Promise(function(resolve, reject){
-
-
 				fs.createReadStream(pngDir + pngName)
 				    .pipe(new PNG({
 				        filterType: 4
 				    }))
-				    .on('parsed', function() {
-				    	pngInfo = this
+				    .on('parsed', (res)=> {
+				    	pngInfo = res
+				    	let atlas = fillInAtlas(pngInfo, voxFileNames[i].replace(".vox", ""))
+
+						let jsonName = pngName.replace(".png", ".json")
+
+						jsonfile.writeFile(
+							pngDir + jsonName, 
+							atlas, 
+							{spaces: 4}, 
+							function(err) {
+								// console.error("writefile error: " + err)
+							}
+						)
+
+						assignObject(assets, 
+							['spritePaths', voxFileNames[i].replace(".vox", "")], 
+							pngDir + jsonName)
 
 				        resolve()
 				    })
@@ -109,23 +122,13 @@ function createAtlases(){
 	}
 
 	Promise.all(program).then(function(){
-		for(let i = 0; i < voxes.length; i++){
-			let atlas = fillInAtlas(pngInfo, voxFileNames[i].replace(".vox", ""))
-
-			jsonfile.writeFile(
-				pngSaveDirectories[i].replace(/\\\\/g, "/") 
-				+ voxFileNames[i].replace(".vox", ".json"), 
-				atlas, 
-				{spaces: 4}, 
-				function(err) {
-					// console.error("writefile error: " + err)
-				}
-			)
-		}
+		jsonfile.writeFile("assets/assets.json", assets, {spaces: 4}, function(err) {
+			// console.error(err)
+		})
 	})
 }
 
-function fillInAtlas(result, name){console.log("sdfsdfsdf")
+function fillInAtlas(result, name){
 	let atlas = {}
 	let frameIter = -1
 
@@ -170,7 +173,25 @@ function fillInAtlas(result, name){console.log("sdfsdfsdf")
 	return atlas
 }
 
+/**
+ * Shove an object into a nested object
+ * 
+ * @param  {[type]}
+ * @param  {[type]}
+ * @param  {[type]}
+ * @return {[type]}
+ */
+function assignObject(obj, keyPath, value) {
+	let lastKeyIndex = keyPath.length - 1
 
+	for (let i = 0; i < lastKeyIndex; i++) {
+		let key = keyPath[i]
+		if (!(key in obj))
+			obj[key] = {}
+		obj = obj[key]
+	}
+	obj[keyPath[lastKeyIndex]] = value
+}
 
 
 
