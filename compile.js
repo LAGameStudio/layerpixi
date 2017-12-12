@@ -1,5 +1,8 @@
 "use strict"
 
+//DEPENDENCIES:
+//Vox2PNG (https://github.com/StijnBrouwer/vox2png)
+
 //vox2png assets/voxdrafts/samidle1.vox assets/fake3ds/samidle1.png
 
 let jsonfile = require('jsonfile')
@@ -52,8 +55,6 @@ function createPNGs(){
 		shell.mkdir('-p', pngSaveDir)
 	}
 
-
-
 	//run vox2png on every .vox file
 	let vox2pngPromises = []
 	for(let i = 0; i < voxes.length; i++){
@@ -78,27 +79,24 @@ function createPNGs(){
 }
 
 function createAtlases(){
-	let program = []
+	let atlastPromises = []
 	let assets = {}
 
+	//create an atlas for each png
 	for(let i = 0; i < voxes.length; i++){
 		let pngInfo
 
 		let pngDir = pngSaveDirectories[i].replace(/\\\\/g, "/")
 		let pngName = voxFileNames[i].replace(".vox", ".png")
 
-		program.push(
+		atlastPromises.push(
 			new Promise(function(resolve, reject){
 				fs.createReadStream(pngDir + pngName)
 				    .pipe(new PNG({
 				        filterType: 4
 				    }))
 				    .on('parsed', function() {
-				    	doAtlas(this)
-				    })
-
-				    function doAtlas(pnginfo){
-				    	let atlas = fillInAtlas(pnginfo, voxFileNames[i].replace(".vox", ""))
+				    	let atlas = fillInAtlas(this, voxFileNames[i].replace(".vox", ""))
 
 						let jsonName = pngName.replace(".png", ".json")
 
@@ -116,12 +114,12 @@ function createAtlases(){
 							pngDir + jsonName)
 
 				    	resolve()
-				    }
+				    })
 			})
 		)
 	}
 
-	Promise.all(program).then(function(){
+	Promise.all(atlastPromises).then(function(){
 		jsonfile.writeFile("assets/assets.json", assets, {spaces: 4}, function(err) {
 			// console.error(err)
 		})
@@ -142,8 +140,10 @@ function fillInAtlas(result, name){
 
 	atlas['frames'] = {}
 
-	let frameW = parseInt(name)
-	let frameH = parseInt(name)
+	//get number from vox name
+	let frameW = parseInt(name.replace( /^\D+/g, ''))
+	let frameH = parseInt(name.replace( /^\D+/g, ''))
+
 	let numFrames = result.width / (frameW + 1)
 
 	for(let i = 0; i < numFrames; i++){

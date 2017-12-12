@@ -1,5 +1,7 @@
 "use strict"
 
+let perlin = require('perlin-noise')
+
 //vox2png 
 
 class SpriteStack{
@@ -129,6 +131,8 @@ class SpriteStack{
 		this.worldContainer.rotation = this.arc
 		this.stackHeight = 1
 
+		let spriteCount = 0
+
 		let makeThe = (x, y, stackNum)=>{
 			// let thingContainer = new PIXI.Container()
 			let thingContainer = new PIXI.particles.ParticleContainer(126, {})
@@ -150,26 +154,81 @@ class SpriteStack{
 
 				//reference
 				this.stacks[stackNum].push(spr)
+
 				//actual
 				thingContainer.addChild(spr)
 			}
 			this.worldContainer.addChild(thingContainer)
 		}
+		// let radius = 400
+		// for(let i = 0; i < 100; i++){
+		// 	makeThe(Math.random() * radius, Math.random() * radius, i)
+		// }
 
-		let radius = 2000
-		for(let i = 0; i < 100; i++){
-			makeThe(Math.random() * radius, Math.random() * radius, i)
+
+
+		let stackIter = 0
+		let makeThePerlin = (x, y, sprName)=>{
+			// let thingContainer = new PIXI.Container()
+			let thingContainer = new PIXI.particles.ParticleContainer(126, {})
+
+			let frames = Object.keys(PIXI.loader.resources[sprName].data.frames)
+			this.stacks.push([])
+
+			for(let i = 0; i < frames.length; i++){
+				let spr = PIXI.Sprite.fromFrame(frames[i])
+
+				spr.origX = x
+				spr.origY = y
+				spr.x = -Math.sin(this.arc) * (i * this.stackHeight) + spr.origX
+				spr.y = -Math.cos(this.arc) * (i * this.stackHeight) + spr.origY
+				spr.texture.baseTexture.scaleMode = PIXI.SCALE_MODES.NEAREST
+				spr.scale.y = -1
+				spr.anchor.set(0.5, 0.5)
+
+				//reference
+				this.stacks[stackIter].push(spr)
+
+				spriteCount++
+			
+				//actual
+				thingContainer.addChild(spr)
+			}
+			stackIter++
+			this.worldContainer.addChild(thingContainer)
 		}
+		let d = 15
+		const h = perlin.generatePerlinNoise(d, d)
+
+		for(let i = 0; i < d; i++){
+			for(let j = 0; j < d; j++){
+				let perl = h[(d * i) + j]
+
+				if(perl < 0.3){
+					makeThePerlin(i * 10, j * 10, "tree15")
+				}else{
+					makeThePerlin(i * 10, j * 10, "grass15")
+				}
+			}
+		}
+
+		
+
+		
+
+		console.log(spriteCount)
 
 		this.rotSpeed = 0.5
 		this.scaleSpeed = 0.9
 		this.panSpeed = 2
 		this.lastMag = 0
 
-		//start update loop
-		setInterval(()=>{
-			requestAnimationFrame(this.update.bind(this))
-		}, 1)
+		let callUpdate = ()=> { 
+			this.update()
+		}
+		let ticker = PIXI.ticker.shared
+		ticker.add(callUpdate)
+		ticker.start()
 	}
 
 	getdist(x1, y1, x2, y2){
@@ -181,61 +240,90 @@ class SpriteStack{
 	}
 
 	update(){
-		// let rotRight = false
-		// let rotLeft = false
-		// let rotMag = 0
+		let rotRight = false
+		let rotLeft = false
+		let rotMag = 0
 
-		// if(this.mouseX < this.W / 2){
-		// 	rotLeft = true
-		// 	rotMag = 1 - (this.mouseX / (this.W / 2))
-		// 	rotMag = -rotMag
-		// }
-		// else if(this.mouseX >= this.W / 2){
-		// 	rotRight = true
-		// 	rotMag = 1 - (this.mouseX / (this.W / 2))
-		// }
+		if(this.mouseX < this.W / 2){
+			rotLeft = true
+			rotMag = 1 - (this.mouseX / (this.W / 2))
+			rotMag = -rotMag
+		}
+		else if(this.mouseX >= this.W / 2){
+			rotRight = true
+			rotMag = 1 - (this.mouseX / (this.W / 2))
+		}
 
-		// //rotate right
-		// if(
-		// 	this.keyState['e'] 
-		// 	|| 
-		// 	(rotRight
-		// 	&& this.keyState['rightmouse'])
-		// 	)
-		// {
-		// 	this.arc += (Math.PI / 180) * rotMag
-		// 	this.worldContainer.rotation = this.arc
+		//rotate right with mouse
+		if(
+			rotRight
+			&& this.keyState['rightmouse'])
+		{
+			this.arc += (Math.PI / 180) * rotMag
+			this.worldContainer.rotation = this.arc
 
-		// 	for(let i = 0; i < this.worldContainer.children.length; i++){
-		// 		for(let j = 0; j < this.worldContainer.children[i].children.length; j++){
-		// 			let spr = this.worldContainer.children[i].children[j]
+			for(let i = 0; i < this.worldContainer.children.length; i++){
+				for(let j = 0; j < this.worldContainer.children[i].children.length; j++){
+					let spr = this.worldContainer.children[i].children[j]
 
-		// 			spr.x = -Math.sin(this.arc) * (j * this.stackHeight) + spr.origX
-		// 			spr.y = -Math.cos(this.arc) * (j * this.stackHeight) + spr.origY
-		// 		}
-		// 	}
-		// }
+					spr.x = -Math.sin(this.arc) * (j * this.stackHeight) + spr.origX
+					spr.y = -Math.cos(this.arc) * (j * this.stackHeight) + spr.origY
+				}
+			}
 
-		// //rotate left
-		// if(
-		// 	this.keyState['q'] 
-		// 	|| 
-		// 	(rotLeft
-		// 	&& this.keyState['rightmouse'])
-		// 	)
-		// {
-		// 	this.arc -= (Math.PI / 180) * rotMag
-		// 	this.worldContainer.rotation = this.arc
+		}
 
-		// 	for(let i = 0; i < this.worldContainer.children.length; i++){
-		// 		for(let j = 0; j < this.worldContainer.children[i].children.length; j++){
-		// 			let spr = this.worldContainer.children[i].children[j]
+		//rotate right with keyboard
+		if(
+			this.keyState['e'])
+		{
+			this.arc += (Math.PI / 180) * -1
+			this.worldContainer.rotation = this.arc
 
-		// 			spr.x = -Math.sin(this.arc) * (j * this.stackHeight) + spr.origX
-		// 			spr.y = -Math.cos(this.arc) * (j * this.stackHeight) + spr.origY
-		// 		}
-		// 	}
-		// }
+			for(let i = 0; i < this.worldContainer.children.length; i++){
+				for(let j = 0; j < this.worldContainer.children[i].children.length; j++){
+					let spr = this.worldContainer.children[i].children[j]
+
+					spr.x = -Math.sin(this.arc) * (j * this.stackHeight) + spr.origX
+					spr.y = -Math.cos(this.arc) * (j * this.stackHeight) + spr.origY
+				}
+			}
+		}
+
+		//rotate left with mouse
+		if(
+			rotLeft
+			&& this.keyState['rightmouse'])
+		{
+			this.arc -= (Math.PI / 180) * rotMag
+			this.worldContainer.rotation = this.arc
+
+			for(let i = 0; i < this.worldContainer.children.length; i++){
+				for(let j = 0; j < this.worldContainer.children[i].children.length; j++){
+					let spr = this.worldContainer.children[i].children[j]
+
+					spr.x = -Math.sin(this.arc) * (j * this.stackHeight) + spr.origX
+					spr.y = -Math.cos(this.arc) * (j * this.stackHeight) + spr.origY
+				}
+			}
+		}
+
+		//rotate left with keyboard
+		if(
+			this.keyState['q'] )
+		{
+			this.arc -= (Math.PI / 180) * -1
+			this.worldContainer.rotation = this.arc
+
+			for(let i = 0; i < this.worldContainer.children.length; i++){
+				for(let j = 0; j < this.worldContainer.children[i].children.length; j++){
+					let spr = this.worldContainer.children[i].children[j]
+
+					spr.x = -Math.sin(this.arc) * (j * this.stackHeight) + spr.origX
+					spr.y = -Math.cos(this.arc) * (j * this.stackHeight) + spr.origY
+				}
+			}
+		}
 		
 		if(this.keyState['leftmouse'])
 		{
