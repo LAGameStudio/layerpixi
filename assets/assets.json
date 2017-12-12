@@ -4,6 +4,24 @@
         "20": "assets/pngs/world/20.json",
         "30": "assets/pngs/world/30.json",
         "grass15": "assets/pngs/world/grass15.json",
-        "tree15": "assets/pngs/world/tree15.json"
+        "scene_army126": "assets/pngs/world/scene_army126.json",
+        "scene_alien126": "assets/pngs/world/scene_alien126.json",
+        "scene_carflip126": "assets/pngs/world/scene_carflip126.json",
+        "scene_checkpoint126": "assets/pngs/world/scene_checkpoint126.json",
+        "scene_crucifix126": "assets/pngs/world/scene_crucifix126.json",
+        "scene_church126": "assets/pngs/world/scene_church126.json",
+        "scene_fall_126": "assets/pngs/world/scene_fall_126.json",
+        "scene_depot126": "assets/pngs/world/scene_depot126.json",
+        "scene_hazmat126": "assets/pngs/world/scene_hazmat126.json",
+        "scene_depota126": "assets/pngs/world/scene_depota126.json",
+        "scene_depotdd126": "assets/pngs/world/scene_depotdd126.json",
+        "scene_houseaa_126": "assets/pngs/world/scene_houseaa_126.json",
+        "scene_housee_126": "assets/pngs/world/scene_housee_126.json",
+        "scene_housep_126": "assets/pngs/world/scene_housep_126.json",
+        "scene_househ_126": "assets/pngs/world/scene_househ_126.json",
+        "tree15": "assets/pngs/world/tree15.json",
+        "scene_houser_126": "assets/pngs/world/scene_houser_126.json",
+        "scene_house_126": "assets/pngs/world/scene_house_126.json",
+        "scene_housey_126": "assets/pngs/world/scene_housey_126.json"
     }
 }

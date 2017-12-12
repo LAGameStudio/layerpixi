@@ -6,6 +6,8 @@ let perlin = require('perlin-noise')
 
 class SpriteStack{
 	constructor(app, assets){
+		this.app = app
+
 		this.rootContainer = new PIXI.Container()
 
 		//initialize camera to 0,0 of world
@@ -197,18 +199,28 @@ class SpriteStack{
 			stackIter++
 			this.worldContainer.addChild(thingContainer)
 		}
-		let d = 15
+		let d = 20
+		let spacing = 124
 		const h = perlin.generatePerlinNoise(d, d)
 
+		let allowed = []
+		for(let i in stackNames){
+			if(stackNames[i].includes("scene"))
+				allowed.push(stackNames[i])
+		}
+		console.log(allowed)
 		for(let i = 0; i < d; i++){
 			for(let j = 0; j < d; j++){
 				let perl = h[(d * i) + j]
 
-				if(perl < 0.3){
-					makeThePerlin(i * 10, j * 10, "tree15")
-				}else{
-					makeThePerlin(i * 10, j * 10, "grass15")
-				}
+				let randStack = allowed[Math.floor(Math.random() * allowed.length)]
+				makeThePerlin(i * spacing, j * spacing, randStack)
+
+				// if(perl < 0.3){
+				// 	makeThePerlin(i * spacing, j * spacing, "tree15")
+				// }else{
+				// 	makeThePerlin(i * spacing, j * spacing, "scene_house_126")
+				// }
 			}
 		}
 

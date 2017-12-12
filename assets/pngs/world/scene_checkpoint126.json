@@ -1,0 +1,652 @@
+{
+    "meta": {
+        "image": "scene_checkpoint126.png",
+        "size": {
+            "w": 4064,
+            "h": 126
+        },
+        "scale": "1"
+    },
+    "frames": {
+        "scene_checkpoint126_0": {
+            "frame": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_checkpoint126_1": {
+            "frame": {
+                "x": 127,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_checkpoint126_2": {
+            "frame": {
+                "x": 254,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_checkpoint126_3": {
+            "frame": {
+                "x": 381,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_checkpoint126_4": {
+            "frame": {
+                "x": 508,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_checkpoint126_5": {
+            "frame": {
+                "x": 635,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_checkpoint126_6": {
+            "frame": {
+                "x": 762,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_checkpoint126_7": {
+            "frame": {
+                "x": 889,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_checkpoint126_8": {
+            "frame": {
+                "x": 1016,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_checkpoint126_9": {
+            "frame": {
+                "x": 1143,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_checkpoint126_10": {
+            "frame": {
+                "x": 1270,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_checkpoint126_11": {
+            "frame": {
+                "x": 1397,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_checkpoint126_12": {
+            "frame": {
+                "x": 1524,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_checkpoint126_13": {
+            "frame": {
+                "x": 1651,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_checkpoint126_14": {
+            "frame": {
+                "x": 1778,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_checkpoint126_15": {
+            "frame": {
+                "x": 1905,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_checkpoint126_16": {
+            "frame": {
+                "x": 2032,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_checkpoint126_17": {
+            "frame": {
+                "x": 2159,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_checkpoint126_18": {
+            "frame": {
+                "x": 2286,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_checkpoint126_19": {
+            "frame": {
+                "x": 2413,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_checkpoint126_20": {
+            "frame": {
+                "x": 2540,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_checkpoint126_21": {
+            "frame": {
+                "x": 2667,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_checkpoint126_22": {
+            "frame": {
+                "x": 2794,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_checkpoint126_23": {
+            "frame": {
+                "x": 2921,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_checkpoint126_24": {
+            "frame": {
+                "x": 3048,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_checkpoint126_25": {
+            "frame": {
+                "x": 3175,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_checkpoint126_26": {
+            "frame": {
+                "x": 3302,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_checkpoint126_27": {
+            "frame": {
+                "x": 3429,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_checkpoint126_28": {
+            "frame": {
+                "x": 3556,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_checkpoint126_29": {
+            "frame": {
+                "x": 3683,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_checkpoint126_30": {
+            "frame": {
+                "x": 3810,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_checkpoint126_31": {
+            "frame": {
+                "x": 3937,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        }
+    }
+}

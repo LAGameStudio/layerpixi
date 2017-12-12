@@ -1,0 +1,512 @@
+{
+    "meta": {
+        "image": "scene_house_126.png",
+        "size": {
+            "w": 3175,
+            "h": 126
+        },
+        "scale": "1"
+    },
+    "frames": {
+        "scene_house_126_0": {
+            "frame": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_house_126_1": {
+            "frame": {
+                "x": 127,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_house_126_2": {
+            "frame": {
+                "x": 254,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_house_126_3": {
+            "frame": {
+                "x": 381,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_house_126_4": {
+            "frame": {
+                "x": 508,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_house_126_5": {
+            "frame": {
+                "x": 635,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_house_126_6": {
+            "frame": {
+                "x": 762,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_house_126_7": {
+            "frame": {
+                "x": 889,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_house_126_8": {
+            "frame": {
+                "x": 1016,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_house_126_9": {
+            "frame": {
+                "x": 1143,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_house_126_10": {
+            "frame": {
+                "x": 1270,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_house_126_11": {
+            "frame": {
+                "x": 1397,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_house_126_12": {
+            "frame": {
+                "x": 1524,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_house_126_13": {
+            "frame": {
+                "x": 1651,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_house_126_14": {
+            "frame": {
+                "x": 1778,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_house_126_15": {
+            "frame": {
+                "x": 1905,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_house_126_16": {
+            "frame": {
+                "x": 2032,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_house_126_17": {
+            "frame": {
+                "x": 2159,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_house_126_18": {
+            "frame": {
+                "x": 2286,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_house_126_19": {
+            "frame": {
+                "x": 2413,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_house_126_20": {
+            "frame": {
+                "x": 2540,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_house_126_21": {
+            "frame": {
+                "x": 2667,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_house_126_22": {
+            "frame": {
+                "x": 2794,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_house_126_23": {
+            "frame": {
+                "x": 2921,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_house_126_24": {
+            "frame": {
+                "x": 3048,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        }
+    }
+}

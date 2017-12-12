@@ -1,0 +1,11 @@
+{
+    "meta": {
+        "image": "scene_aliens.png",
+        "size": {
+            "w": 8128,
+            "h": 126
+        },
+        "scale": "1"
+    },
+    "frames": {}
+}

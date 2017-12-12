@@ -1,0 +1,11 @@
+{
+    "meta": {
+        "image": "scene_depot.png",
+        "size": {
+            "w": 7744,
+            "h": 124
+        },
+        "scale": "1"
+    },
+    "frames": {}
+}
