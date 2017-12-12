@@ -2,7 +2,7 @@
     "meta": {
         "image": "scene_crucifix126.png",
         "size": {
-            "w": 4064,
+            "w": 16002,
             "h": 126
         },
         "scale": "1"
@@ -631,6 +631,1886 @@
         "scene_crucifix126_31": {
             "frame": {
                 "x": 3937,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_32": {
+            "frame": {
+                "x": 4064,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_33": {
+            "frame": {
+                "x": 4191,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_34": {
+            "frame": {
+                "x": 4318,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_35": {
+            "frame": {
+                "x": 4445,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_36": {
+            "frame": {
+                "x": 4572,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_37": {
+            "frame": {
+                "x": 4699,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_38": {
+            "frame": {
+                "x": 4826,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_39": {
+            "frame": {
+                "x": 4953,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_40": {
+            "frame": {
+                "x": 5080,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_41": {
+            "frame": {
+                "x": 5207,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_42": {
+            "frame": {
+                "x": 5334,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_43": {
+            "frame": {
+                "x": 5461,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_44": {
+            "frame": {
+                "x": 5588,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_45": {
+            "frame": {
+                "x": 5715,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_46": {
+            "frame": {
+                "x": 5842,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_47": {
+            "frame": {
+                "x": 5969,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_48": {
+            "frame": {
+                "x": 6096,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_49": {
+            "frame": {
+                "x": 6223,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_50": {
+            "frame": {
+                "x": 6350,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_51": {
+            "frame": {
+                "x": 6477,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_52": {
+            "frame": {
+                "x": 6604,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_53": {
+            "frame": {
+                "x": 6731,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_54": {
+            "frame": {
+                "x": 6858,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_55": {
+            "frame": {
+                "x": 6985,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_56": {
+            "frame": {
+                "x": 7112,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_57": {
+            "frame": {
+                "x": 7239,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_58": {
+            "frame": {
+                "x": 7366,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_59": {
+            "frame": {
+                "x": 7493,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_60": {
+            "frame": {
+                "x": 7620,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_61": {
+            "frame": {
+                "x": 7747,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_62": {
+            "frame": {
+                "x": 7874,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_63": {
+            "frame": {
+                "x": 8001,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_64": {
+            "frame": {
+                "x": 8128,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_65": {
+            "frame": {
+                "x": 8255,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_66": {
+            "frame": {
+                "x": 8382,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_67": {
+            "frame": {
+                "x": 8509,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_68": {
+            "frame": {
+                "x": 8636,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_69": {
+            "frame": {
+                "x": 8763,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_70": {
+            "frame": {
+                "x": 8890,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_71": {
+            "frame": {
+                "x": 9017,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_72": {
+            "frame": {
+                "x": 9144,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_73": {
+            "frame": {
+                "x": 9271,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_74": {
+            "frame": {
+                "x": 9398,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_75": {
+            "frame": {
+                "x": 9525,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_76": {
+            "frame": {
+                "x": 9652,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_77": {
+            "frame": {
+                "x": 9779,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_78": {
+            "frame": {
+                "x": 9906,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_79": {
+            "frame": {
+                "x": 10033,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_80": {
+            "frame": {
+                "x": 10160,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_81": {
+            "frame": {
+                "x": 10287,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_82": {
+            "frame": {
+                "x": 10414,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_83": {
+            "frame": {
+                "x": 10541,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_84": {
+            "frame": {
+                "x": 10668,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_85": {
+            "frame": {
+                "x": 10795,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_86": {
+            "frame": {
+                "x": 10922,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_87": {
+            "frame": {
+                "x": 11049,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_88": {
+            "frame": {
+                "x": 11176,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_89": {
+            "frame": {
+                "x": 11303,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_90": {
+            "frame": {
+                "x": 11430,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_91": {
+            "frame": {
+                "x": 11557,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_92": {
+            "frame": {
+                "x": 11684,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_93": {
+            "frame": {
+                "x": 11811,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_94": {
+            "frame": {
+                "x": 11938,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_95": {
+            "frame": {
+                "x": 12065,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_96": {
+            "frame": {
+                "x": 12192,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_97": {
+            "frame": {
+                "x": 12319,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_98": {
+            "frame": {
+                "x": 12446,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_99": {
+            "frame": {
+                "x": 12573,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_100": {
+            "frame": {
+                "x": 12700,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_101": {
+            "frame": {
+                "x": 12827,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_102": {
+            "frame": {
+                "x": 12954,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_103": {
+            "frame": {
+                "x": 13081,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_104": {
+            "frame": {
+                "x": 13208,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_105": {
+            "frame": {
+                "x": 13335,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_106": {
+            "frame": {
+                "x": 13462,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_107": {
+            "frame": {
+                "x": 13589,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_108": {
+            "frame": {
+                "x": 13716,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_109": {
+            "frame": {
+                "x": 13843,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_110": {
+            "frame": {
+                "x": 13970,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_111": {
+            "frame": {
+                "x": 14097,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_112": {
+            "frame": {
+                "x": 14224,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_113": {
+            "frame": {
+                "x": 14351,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_114": {
+            "frame": {
+                "x": 14478,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_115": {
+            "frame": {
+                "x": 14605,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_116": {
+            "frame": {
+                "x": 14732,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_117": {
+            "frame": {
+                "x": 14859,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_118": {
+            "frame": {
+                "x": 14986,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_119": {
+            "frame": {
+                "x": 15113,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_120": {
+            "frame": {
+                "x": 15240,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_121": {
+            "frame": {
+                "x": 15367,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_122": {
+            "frame": {
+                "x": 15494,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_123": {
+            "frame": {
+                "x": 15621,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_124": {
+            "frame": {
+                "x": 15748,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 126,
+                "h": 126
+            },
+            "sourceSize": {
+                "w": 126,
+                "h": 126
+            }
+        },
+        "scene_crucifix126_125": {
+            "frame": {
+                "x": 15875,
                 "y": 0,
                 "w": 126,
                 "h": 126

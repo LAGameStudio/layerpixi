@@ -29,7 +29,14 @@ class SpriteStack{
 		//input
 		//
 		//
-		
+
+		this.mouseX
+		this.mouseY
+		this.mouseMoveX
+		this.mouseMoveY
+		this.mouseSprite = PIXI.Sprite.fromFrame("tree15_9")
+		// this.rootContainer.addChild(this.mouseSprite)
+
 		//prevent right click menu
 		document.addEventListener('contextmenu', event => event.preventDefault())
 
@@ -70,12 +77,14 @@ class SpriteStack{
 				this.keyState['leftmouse'] = false
 			}
 		})
-
-		this.mouseX
-		this.mouseY
-		this.mouseMoveX
-		this.mouseMoveY
-
+		window.addEventListener('mouseupoutside', (event)=>{
+			if(event.which === 3){
+				this.keyState['rightmouse'] = false
+			}
+			if(event.which === 1){
+				this.keyState['leftmouse'] = false
+			}
+		})
 		window.addEventListener('mousemove', (event)=>{
 			if(event.clientX > -1 && event.clientX < this.W){
 				this.mouseX = event.clientX
@@ -88,30 +97,11 @@ class SpriteStack{
 			}
 		})
 
-		// this.rootContainer.interactive = true
-		// this.rootContainer.on('mousemove', (event)=>{
-		// 	if(event.data.global.x > -1 && event.data.global.x < this.W){
-		// 		this.mouseX = event.data.global.x
-		// 		this.mouseMoveX = event.data.originalEvent.movementX
-		// 	}
-
-		// 	if(event.data.global.y > -1 && event.data.global.y < this.H){
-		// 		this.mouseY = event.data.global.y
-		// 		this.mouseMoveY = event.data.originalEvent.movementY
-		// 	}
-		// })
-		// .on('rightdown', (event)=>{
-		// 	this.keyState['rightmouse'] = true
-		// })
-		// .on('rightup', (event)=>{
-		// 	this.keyState['rightmouse'] = false
-		// })
-		// .on('rightupoutside', (event)=>{
-		// 	this.keyState['rightmouse'] = false
-		// })
-
-		//create game
-		console.log(PIXI.loader.resources)
+		//
+		//
+		//Generate map
+		//
+		//
 
 		let stackNames = []
 		let stackFrames = []
@@ -125,54 +115,16 @@ class SpriteStack{
 		}
 
 		this.stacks = []
-
-		// let frames = Object.keys(stackFrames)
-		// let spriteStack = []
-
-		this.arc = (Math.PI / 180) * 135
+		this.arc = (Math.PI / 180) * 0
 		this.worldContainer.rotation = this.arc
 		this.stackHeight = 1
 
 		let spriteCount = 0
-
-		let makeThe = (x, y, stackNum)=>{
-			// let thingContainer = new PIXI.Container()
-			let thingContainer = new PIXI.particles.ParticleContainer(126, {})
-
-			let randStack = stackFrames[Math.floor(Math.random() * stackFrames.length)]
-			let frames = Object.keys(randStack)
-			this.stacks.push([])
-
-			for(let i = 0; i < frames.length; i++){
-				let spr = PIXI.Sprite.fromFrame(frames[i])
-
-				spr.origX = x
-				spr.origY = y
-				spr.x = -Math.sin(this.arc) * (i * this.stackHeight) + spr.origX
-				spr.y = -Math.cos(this.arc) * (i * this.stackHeight) + spr.origY
-				spr.texture.baseTexture.scaleMode = PIXI.SCALE_MODES.NEAREST
-				spr.scale.y = -1
-				spr.anchor.set(0.5, 0.5)
-
-				//reference
-				this.stacks[stackNum].push(spr)
-
-				//actual
-				thingContainer.addChild(spr)
-			}
-			this.worldContainer.addChild(thingContainer)
-		}
-		// let radius = 400
-		// for(let i = 0; i < 100; i++){
-		// 	makeThe(Math.random() * radius, Math.random() * radius, i)
-		// }
-
-
-
 		let stackIter = 0
-		let makeThePerlin = (x, y, sprName)=>{
-			// let thingContainer = new PIXI.Container()
-			let thingContainer = new PIXI.particles.ParticleContainer(126, {})
+
+		let makeThePerlin = (x, y, sprName, order, pileContainer)=>{
+			let thingContainer = new PIXI.Container()
+			// let thingContainer = new PIXI.particles.ParticleContainer(126, {})
 
 			let frames = Object.keys(PIXI.loader.resources[sprName].data.frames)
 			this.stacks.push([])
@@ -187,6 +139,7 @@ class SpriteStack{
 				spr.texture.baseTexture.scaleMode = PIXI.SCALE_MODES.NEAREST
 				spr.scale.y = -1
 				spr.anchor.set(0.5, 0.5)
+				spr.order = order
 
 				//reference
 				this.stacks[stackIter].push(spr)
@@ -196,11 +149,15 @@ class SpriteStack{
 				//actual
 				thingContainer.addChild(spr)
 			}
+			pileContainer.addChild(thingContainer)
+			// this.worldContainer.addChild(thingContainer)
 			stackIter++
-			this.worldContainer.addChild(thingContainer)
 		}
+
+		this.map = []
+		this.piles = []
 		let d = 20
-		let spacing = 124
+		let spacing = 15
 		const h = perlin.generatePerlinNoise(d, d)
 
 		let allowed = []
@@ -208,21 +165,61 @@ class SpriteStack{
 			if(stackNames[i].includes("scene"))
 				allowed.push(stackNames[i])
 		}
-		console.log(allowed)
-		for(let i = 0; i < d; i++){
-			for(let j = 0; j < d; j++){
-				let perl = h[(d * i) + j]
 
-				let randStack = allowed[Math.floor(Math.random() * allowed.length)]
-				makeThePerlin(i * spacing, j * spacing, randStack)
+		for(let y = 0; y < d; y++){
+			let row = []
+			for(let x = 0; x < d; x++){
+				row.push({})
+			}
+			this.map.push(row)
+		}
 
-				// if(perl < 0.3){
-				// 	makeThePerlin(i * spacing, j * spacing, "tree15")
-				// }else{
-				// 	makeThePerlin(i * spacing, j * spacing, "scene_house_126")
-				// }
+
+		for(let y = 0; y < d; y++){
+			for(let x = 0; x < d; x++){
+				let perl = h[(d * y) + x]
+
+				// let randStack = allowed[Math.floor(Math.random() * allowed.length)]
+				// makeThePerlin(i * spacing, j * spacing, randStack)
+				this.map[x][y][0] = "grass15"
+
+				if(perl < 0.3){
+					// makeThePerlin(x * spacing, y * spacing, "tree15")
+					// row.push("tree15")
+					
+					this.map[x][y][1] = "tree15"
+				}else{
+					// makeThePerlin(x * spacing, y * spacing, "grass15")
+					// row.push("grass15")
+					// row[0] = "grass15"
+				}
 			}
 		}
+
+		for(let y = 0; y < d; y++){
+			for(let x = 0; x < d; x++){
+				// if(this.map[x][y][0] !== undefined){
+				// 	makeThePerlin(x * spacing, y * spacing, this.map[x][y][0])
+				// }
+				// if(this.map[x][y][1] !== undefined){
+				// 	makeThePerlin(x * spacing, y * spacing, this.map[x][y][1])
+				// }
+
+				let pileContainer = new PIXI.Container()
+				for(let i = 0;; i++){
+					if(this.map[x][y][i] !== undefined){
+						makeThePerlin(x * spacing, y * spacing, this.map[x][y][i], i, pileContainer)
+					}
+					else{
+						break
+					}
+				}
+				this.worldContainer.addChild(pileContainer)
+				this.piles.push(pileContainer)
+			}
+		}
+
+		console.log(this.piles)
 
 		
 
@@ -251,10 +248,34 @@ class SpriteStack{
 			)
 	}
 
+	updateSpriteRotations(){
+		// for(let i = 0; i < this.worldContainer.children.length; i++){
+		// 	for(let j = 0; j < this.worldContainer.children[i].children.length; j++){
+		// 		for(let k = 0; k < this.worldContainer.children[i].children[j].children.length; k++){
+		// 			let spr = this.worldContainer.children[i].children[j].children[k]
+
+		// 			spr.x = -Math.sin(this.arc) * (k * this.stackHeight) + spr.origX
+		// 			spr.y = -Math.cos(this.arc) * (k * this.stackHeight) + spr.origY
+		// 		}
+		// 	}
+		// }
+
+		for(let i = 0; i < this.stacks.length; i++){
+			for(let j = 0; j < this.stacks[i].length; j++){
+				let spr = this.stacks[i][j]
+
+				spr.x = -Math.sin(this.arc) * (j * this.stackHeight) + spr.origX
+				spr.y = -Math.cos(this.arc) * (j * this.stackHeight) + spr.origY
+			}
+		}
+	}
+
 	update(){
 		let rotRight = false
 		let rotLeft = false
 		let rotMag = 0
+
+		let updateRotations = false
 
 		if(this.mouseX < this.W / 2){
 			rotLeft = true
@@ -273,16 +294,7 @@ class SpriteStack{
 		{
 			this.arc += (Math.PI / 180) * rotMag
 			this.worldContainer.rotation = this.arc
-
-			for(let i = 0; i < this.worldContainer.children.length; i++){
-				for(let j = 0; j < this.worldContainer.children[i].children.length; j++){
-					let spr = this.worldContainer.children[i].children[j]
-
-					spr.x = -Math.sin(this.arc) * (j * this.stackHeight) + spr.origX
-					spr.y = -Math.cos(this.arc) * (j * this.stackHeight) + spr.origY
-				}
-			}
-
+			updateRotations = true
 		}
 
 		//rotate right with keyboard
@@ -291,15 +303,7 @@ class SpriteStack{
 		{
 			this.arc += (Math.PI / 180) * -1
 			this.worldContainer.rotation = this.arc
-
-			for(let i = 0; i < this.worldContainer.children.length; i++){
-				for(let j = 0; j < this.worldContainer.children[i].children.length; j++){
-					let spr = this.worldContainer.children[i].children[j]
-
-					spr.x = -Math.sin(this.arc) * (j * this.stackHeight) + spr.origX
-					spr.y = -Math.cos(this.arc) * (j * this.stackHeight) + spr.origY
-				}
-			}
+			updateRotations = true
 		}
 
 		//rotate left with mouse
@@ -309,15 +313,7 @@ class SpriteStack{
 		{
 			this.arc -= (Math.PI / 180) * rotMag
 			this.worldContainer.rotation = this.arc
-
-			for(let i = 0; i < this.worldContainer.children.length; i++){
-				for(let j = 0; j < this.worldContainer.children[i].children.length; j++){
-					let spr = this.worldContainer.children[i].children[j]
-
-					spr.x = -Math.sin(this.arc) * (j * this.stackHeight) + spr.origX
-					spr.y = -Math.cos(this.arc) * (j * this.stackHeight) + spr.origY
-				}
-			}
+			updateRotations = true
 		}
 
 		//rotate left with keyboard
@@ -326,22 +322,14 @@ class SpriteStack{
 		{
 			this.arc -= (Math.PI / 180) * -1
 			this.worldContainer.rotation = this.arc
-
-			for(let i = 0; i < this.worldContainer.children.length; i++){
-				for(let j = 0; j < this.worldContainer.children[i].children.length; j++){
-					let spr = this.worldContainer.children[i].children[j]
-
-					spr.x = -Math.sin(this.arc) * (j * this.stackHeight) + spr.origX
-					spr.y = -Math.cos(this.arc) * (j * this.stackHeight) + spr.origY
-				}
-			}
+			updateRotations = true
 		}
 		
 		if(this.keyState['leftmouse'])
 		{
 			let mag = 0
 			let dist = 0
-			let mult = 1
+			let mult = 0.3
 
 			//get magnitude based on mouse movement
 			if(this.mouseY < this.H / 2){
@@ -380,23 +368,7 @@ class SpriteStack{
 
 			this.worldContainer.rotation = this.arc
 
-			for(let i = 0; i < this.stacks.length; i++){
-				for(let j = 0; j < this.stacks[i].length; j++){
-					let spr = this.stacks[i][j]
-
-					spr.x = -Math.sin(this.arc) * (j * this.stackHeight) + spr.origX
-					spr.y = -Math.cos(this.arc) * (j * this.stackHeight) + spr.origY
-				}
-			}
-
-			// for(let i = 0; i < this.worldContainer.children.length; i++){
-			// 	for(let j = 0; j < this.worldContainer.children[i].children.length; j++){
-			// 		let spr = this.worldContainer.children[i].children[j]
-
-			// 		spr.x = -Math.sin(this.arc) * (j * this.stackHeight) + spr.origX
-			// 		spr.y = -Math.cos(this.arc) * (j * this.stackHeight) + spr.origY
-			// 	}
-			// }
+			updateRotations = true
 
 			this.mouseMoveX = 0
 			this.mouseMoveY = 0
@@ -410,12 +382,16 @@ class SpriteStack{
 			this.worldContainer.children[0].onChildrenChange(0)
 		}
 
+		if(updateRotations)
+			this.updateSpriteRotations()
+
 		//swap stack
 		if(this.keyState['g']){
 			for(let k = 0; k < this.stacks.length; k++){
 				// let newFrames = PIXI.loader.resources["the4"].textures
 				let newFrames = PIXI.loader.resources[
-					Object.keys(PIXI.loader.resources)[Math.floor(Math.random() * Object.keys(PIXI.loader.resources).length)]
+					Object.keys(PIXI.loader.resources)[
+					Math.floor(Math.random() * Object.keys(PIXI.loader.resources).length)]
 				].textures
 
 				let randStackIndex = Math.floor(Math.random() * this.stacks.length)
@@ -436,7 +412,7 @@ class SpriteStack{
 				//if any left over, make them blank
 				for(let i = sprIter; i < randStack.length; i++){
 					// randStack[i].visible = false //only work for not particle container
-					let blankTex = PIXI.loader.resources["the4"].textures["samidle_19"]
+					let blankTex = PIXI.loader.resources["scene_houseaa_126"].textures["scene_houseaa_60"]
 					randStack[i].texture = blankTex
 				}
 
@@ -453,18 +429,39 @@ class SpriteStack{
 		//sort things by global y to make occlusion work
 		this.worldContainer.children.sort((a, b) => {
 		    return this.worldContainer.toGlobal(
-				a.children[0].position).y
+				a.children[0].children[0].position).y
 				- 
 				this.worldContainer.toGlobal(
-				b.children[0].position).y
+				b.children[0].children[0].position).y
 		})
 
+		// for(let i in this.piles){
+		// 	this.piles[i].children.sort((a, b) => {
+		// 	    return a.children[0].order - b.children[0].order
+		// 	})
+		// }
+
+		// for(let i = 0; i < this.worldContainer.children.length; i++){
+		// 	// console.log(this.worldContainer.children[i])
+		// 	this.worldContainer.children[i].children.sort((a, b) => {
+		// 	    return a.children[0].order - b.children[0].order
+		// 	})
+		// }
+		
+
+		
+
+		//
+		//
+		//PANNING
+		//
+		//
+		
 		let down = false
 		let up = false
 		let left = false
 		let right = false
-
-		//panning
+		
 		if(this.keyState['d'] || this.keyState['D']){
 			right = true
 		}
@@ -498,7 +495,12 @@ class SpriteStack{
 				this.worldContainer.pivot.y + Math.cos(this.arc) * this.panSpeed)
 		}
 		
-		//zoom
+		//
+		//
+		//ZOOMING
+		//
+		//
+		
 		if (this.keyState['zoomIn']){
 			this.rootContainer.scale.x /= this.scaleSpeed
 			this.rootContainer.scale.y /= this.scaleSpeed
@@ -509,6 +511,15 @@ class SpriteStack{
 			this.rootContainer.scale.y *= this.scaleSpeed
 			this.keyState['zoomOut'] = false
 		}
+
+		// this.mouseSprite.x = this.mouseX
+		// this.mouseSprite.y = this.mouseY
+
+		var point = new PIXI.Point(this.mouseX, this.mouseY)
+		// console.log(this.worldContainer.toLocal(point))
+
+		// this.mouseSprite.x = this.worldContainer.toLocal(point).x
+		// this.mouseSprite.y = this.worldContainer.toLocal(point).y
 	}
 }
 
