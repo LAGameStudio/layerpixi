@@ -107,21 +107,25 @@ class SpriteStack{
 		// })
 
 		//create game
-		let stackNames =["the1", "the2", "the3", "the4", "the5"] 
-		let stackFrames = [
-			PIXI.loader.resources[stackNames[0]].data.frames,
-			PIXI.loader.resources[stackNames[1]].data.frames,
-			PIXI.loader.resources[stackNames[2]].data.frames,
-			PIXI.loader.resources[stackNames[3]].data.frames,
-			PIXI.loader.resources[stackNames[4]].data.frames,
-		]
+		console.log(PIXI.loader.resources)
+
+		let stackNames = []
+		let stackFrames = []
+
+		for(let i in PIXI.loader.resources){
+			if(i.includes("_image"))
+				continue
+
+			stackNames.push(i)
+			stackFrames.push(PIXI.loader.resources[i].data.frames)
+		}
 
 		this.stacks = []
 
 		// let frames = Object.keys(stackFrames)
 		// let spriteStack = []
 
-		this.arc = (Math.PI / 180) * 0
+		this.arc = (Math.PI / 180) * 135
 		this.worldContainer.rotation = this.arc
 		this.stackHeight = 1
 
@@ -159,7 +163,7 @@ class SpriteStack{
 
 		this.rotSpeed = 0.5
 		this.scaleSpeed = 0.9
-		this.panSpeed = .6
+		this.panSpeed = 2
 		this.lastMag = 0
 
 		//start update loop

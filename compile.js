@@ -9,9 +9,6 @@ let recursive = require('recursive-readdir')
 let exec = require('child_process').exec
 var shell = require('shelljs')
 
-let fileName = "samidle1"
-let fileDim = 10
-
 let dirPath = "./assets/voxes/"
 let voxes = []
 
@@ -96,9 +93,12 @@ function createAtlases(){
 				    .pipe(new PNG({
 				        filterType: 4
 				    }))
-				    .on('parsed', (res)=> {
-				    	pngInfo = res
-				    	let atlas = fillInAtlas(pngInfo, voxFileNames[i].replace(".vox", ""))
+				    .on('parsed', function() {
+				    	doAtlas(this)
+				    })
+
+				    function doAtlas(pnginfo){
+				    	let atlas = fillInAtlas(pnginfo, voxFileNames[i].replace(".vox", ""))
 
 						let jsonName = pngName.replace(".png", ".json")
 
@@ -115,8 +115,8 @@ function createAtlases(){
 							['spritePaths', voxFileNames[i].replace(".vox", "")], 
 							pngDir + jsonName)
 
-				        resolve()
-				    })
+				    	resolve()
+				    }
 			})
 		)
 	}
@@ -142,8 +142,8 @@ function fillInAtlas(result, name){
 
 	atlas['frames'] = {}
 
-	let frameW = fileDim
-	let frameH = fileDim
+	let frameW = parseInt(name)
+	let frameH = parseInt(name)
 	let numFrames = result.width / (frameW + 1)
 
 	for(let i = 0; i < numFrames; i++){
