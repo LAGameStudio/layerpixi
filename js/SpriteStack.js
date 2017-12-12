@@ -118,15 +118,16 @@ class SpriteStack{
 		this.arc = (Math.PI / 180) * 0
 		this.worldContainer.rotation = this.arc
 		this.stackHeight = 1
+		this.storyHeight = 25
 
 		let spriteCount = 0
 		let stackIter = 0
 
-		let makeThePerlin = (x, y, sprName, order, pileContainer)=>{
+		let makeThePerlin = (x, y, sprData, order, pileContainer)=>{
 			let thingContainer = new PIXI.Container()
 			// let thingContainer = new PIXI.particles.ParticleContainer(126, {})
 
-			let frames = Object.keys(PIXI.loader.resources[sprName].data.frames)
+			let frames = Object.keys(PIXI.loader.resources[sprData.name].data.frames)
 			this.stacks.push([])
 
 			for(let i = 0; i < frames.length; i++){
@@ -134,8 +135,16 @@ class SpriteStack{
 
 				spr.origX = x
 				spr.origY = y
-				spr.x = -Math.sin(this.arc) * (i * this.stackHeight) + spr.origX
-				spr.y = -Math.cos(this.arc) * (i * this.stackHeight) + spr.origY
+				spr.story = sprData.story
+
+				spr.x = -Math.sin(this.arc) 
+				* ((i + (spr.story * this.storyHeight)) * this.stackHeight) 
+				+ spr.origX
+
+				spr.y = -Math.cos(this.arc) 
+				* ((i + (spr.story * this.storyHeight)) * this.stackHeight) 
+				+ spr.origY
+
 				spr.texture.baseTexture.scaleMode = PIXI.SCALE_MODES.NEAREST
 				spr.scale.y = -1
 				spr.anchor.set(0.5, 0.5)
@@ -181,18 +190,27 @@ class SpriteStack{
 
 				// let randStack = allowed[Math.floor(Math.random() * allowed.length)]
 				// makeThePerlin(i * spacing, j * spacing, randStack)
-				this.map[x][y][0] = "grass15"
+				
+				this.map[x][y][0] = {}
+				this.map[x][y][0].name = "grass15"
+				this.map[x][y][0].story = 0
 
 				if(perl < 0.3){
 					// makeThePerlin(x * spacing, y * spacing, "tree15")
 					// row.push("tree15")
 					
-					this.map[x][y][1] = "tree15"
+					this.map[x][y][1] = {}
+					this.map[x][y][1].name = "dudu15"
+					this.map[x][y][1].story = 0
 				}else{
 					// makeThePerlin(x * spacing, y * spacing, "grass15")
 					// row.push("grass15")
 					// row[0] = "grass15"
 				}
+
+				this.map[x][y][2] = {}
+				this.map[x][y][2].name = "jewrat15"
+				this.map[x][y][2].story = 1
 			}
 		}
 
@@ -228,8 +246,8 @@ class SpriteStack{
 		console.log(spriteCount)
 
 		this.rotSpeed = 0.5
-		this.scaleSpeed = 0.9
-		this.panSpeed = 2
+		this.scaleSpeed = 0.7
+		this.panSpeed = 5
 		this.lastMag = 0
 
 		let callUpdate = ()=> { 
@@ -264,8 +282,13 @@ class SpriteStack{
 			for(let j = 0; j < this.stacks[i].length; j++){
 				let spr = this.stacks[i][j]
 
-				spr.x = -Math.sin(this.arc) * (j * this.stackHeight) + spr.origX
-				spr.y = -Math.cos(this.arc) * (j * this.stackHeight) + spr.origY
+				spr.x = -Math.sin(this.arc) 
+				* ((j + (spr.story * this.storyHeight)) * this.stackHeight) 
+				+ spr.origX
+
+				spr.y = -Math.cos(this.arc) 
+				* ((j + (spr.story * this.storyHeight)) * this.stackHeight) 
+				+ spr.origY
 			}
 		}
 	}
@@ -461,7 +484,7 @@ class SpriteStack{
 		let up = false
 		let left = false
 		let right = false
-		
+
 		if(this.keyState['d'] || this.keyState['D']){
 			right = true
 		}
