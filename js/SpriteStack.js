@@ -2,11 +2,17 @@
 
 let perlin = require('perlin-noise')
 
-//vox2png 
-
 class SpriteStack{
 	constructor(app, assets){
 		this.app = app
+		this.W = app.renderer.width
+		this.H = app.renderer.height
+
+		//
+		//
+		//CONTAINERS
+		//
+		//
 
 		this.rootContainer = new PIXI.Container()
 
@@ -21,12 +27,9 @@ class SpriteStack{
 		this.rootContainer.addChild(this.worldContainer)
 		app.stage.addChild(this.rootContainer)
 
-		this.W = app.renderer.width
-		this.H = app.renderer.height
-
 		//
 		//
-		//input
+		//INPUT
 		//
 		//
 
@@ -34,8 +37,11 @@ class SpriteStack{
 		this.mouseY
 		this.mouseMoveX
 		this.mouseMoveY
-		this.mouseSprite = PIXI.Sprite.fromFrame("tree15_9")
-		// this.rootContainer.addChild(this.mouseSprite)
+
+		this.rotSpeed = 0.5
+		this.scaleSpeed = 0.7
+		this.panSpeed = 5
+		this.lastMag = 0
 
 		//prevent right click menu
 		document.addEventListener('contextmenu', event => event.preventDefault())
@@ -96,10 +102,14 @@ class SpriteStack{
 				this.mouseMoveY = event.movementY
 			}
 		})
+		window.addEventListener
+		('click', (evt)=>{
+			this.keyState["click"] = true
+		})
 
 		//
 		//
-		//Generate map
+		//MAP GENERATION
 		//
 		//
 
@@ -114,7 +124,7 @@ class SpriteStack{
 			stackFrames.push(PIXI.loader.resources[i].data.frames)
 		}
 
-		this.stacks = []
+		this.spriteStacks = []
 		this.arc = (Math.PI / 180) * 0
 		this.worldContainer.rotation = this.arc
 		this.stackHeight = 1
@@ -124,11 +134,11 @@ class SpriteStack{
 		let stackIter = 0
 
 		let makeThePerlin = (x, y, sprData, order, pileContainer)=>{
-			let thingContainer = new PIXI.Container()
-			// let thingContainer = new PIXI.particles.ParticleContainer(126, {})
+			// let thingContainer = new PIXI.Container()
+			let thingContainer = new PIXI.particles.ParticleContainer(126, {})
 
 			let frames = Object.keys(PIXI.loader.resources[sprData.name].data.frames)
-			this.stacks.push([])
+			this.spriteStacks.push([])
 
 			for(let i = 0; i < frames.length; i++){
 				let spr = PIXI.Sprite.fromFrame(frames[i])
@@ -151,7 +161,7 @@ class SpriteStack{
 				spr.order = order
 
 				//reference
-				this.stacks[stackIter].push(spr)
+				this.spriteStacks[stackIter].push(spr)
 
 				spriteCount++
 			
@@ -166,7 +176,7 @@ class SpriteStack{
 		this.map = []
 		this.piles = []
 		let d = 20
-		let spacing = 15
+		this.tileSize = 15
 		const h = perlin.generatePerlinNoise(d, d)
 
 		let allowed = []
@@ -188,45 +198,41 @@ class SpriteStack{
 			for(let x = 0; x < d; x++){
 				let perl = h[(d * y) + x]
 
-				// let randStack = allowed[Math.floor(Math.random() * allowed.length)]
-				// makeThePerlin(i * spacing, j * spacing, randStack)
+				let storyiter = 0;
 				
-				this.map[x][y][0] = {}
-				this.map[x][y][0].name = "grass15"
-				this.map[x][y][0].story = 0
+				this.map[x][y][storyiter] = {}
+				this.map[x][y][storyiter].name = "grass15"
+				this.map[x][y][storyiter].story = 0
+				storyiter++
 
-				if(perl < 0.3){
-					// makeThePerlin(x * spacing, y * spacing, "tree15")
-					// row.push("tree15")
-					
-					this.map[x][y][1] = {}
-					this.map[x][y][1].name = "dudu15"
-					this.map[x][y][1].story = 0
+				if(perl < 0.5){
+					this.map[x][y][storyiter] = {}
+					this.map[x][y][storyiter].name = "stonewallcorner15"
+					this.map[x][y][storyiter].story = 0
+					storyiter++
+
+					this.map[x][y][storyiter] = {}
+					this.map[x][y][storyiter].name = "jewrat15"
+					this.map[x][y][storyiter].story = 1
+					storyiter++
+
+					this.map[x][y][storyiter] = {}
+					this.map[x][y][storyiter].name = "dudu15"
+					this.map[x][y][storyiter].story = 2
 				}else{
-					// makeThePerlin(x * spacing, y * spacing, "grass15")
-					// row.push("grass15")
-					// row[0] = "grass15"
+					
 				}
 
-				this.map[x][y][2] = {}
-				this.map[x][y][2].name = "jewrat15"
-				this.map[x][y][2].story = 1
+				
 			}
 		}
 
 		for(let y = 0; y < d; y++){
 			for(let x = 0; x < d; x++){
-				// if(this.map[x][y][0] !== undefined){
-				// 	makeThePerlin(x * spacing, y * spacing, this.map[x][y][0])
-				// }
-				// if(this.map[x][y][1] !== undefined){
-				// 	makeThePerlin(x * spacing, y * spacing, this.map[x][y][1])
-				// }
-
 				let pileContainer = new PIXI.Container()
 				for(let i = 0;; i++){
 					if(this.map[x][y][i] !== undefined){
-						makeThePerlin(x * spacing, y * spacing, this.map[x][y][i], i, pileContainer)
+						makeThePerlin(x * this.tileSize, y * this.tileSize, this.map[x][y][i], i, pileContainer)
 					}
 					else{
 						break
@@ -245,10 +251,7 @@ class SpriteStack{
 
 		console.log(spriteCount)
 
-		this.rotSpeed = 0.5
-		this.scaleSpeed = 0.7
-		this.panSpeed = 5
-		this.lastMag = 0
+		
 
 		let callUpdate = ()=> { 
 			this.update()
@@ -278,9 +281,9 @@ class SpriteStack{
 		// 	}
 		// }
 
-		for(let i = 0; i < this.stacks.length; i++){
-			for(let j = 0; j < this.stacks[i].length; j++){
-				let spr = this.stacks[i][j]
+		for(let i = 0; i < this.spriteStacks.length; i++){
+			for(let j = 0; j < this.spriteStacks[i].length; j++){
+				let spr = this.spriteStacks[i][j]
 
 				spr.x = -Math.sin(this.arc) 
 				* ((j + (spr.story * this.storyHeight)) * this.stackHeight) 
@@ -400,9 +403,12 @@ class SpriteStack{
 		//rotate a stack
 		if(this.keyState['f']){
 			for(let j = 0; j < this.worldContainer.children[0].children.length; j++){
-				this.worldContainer.children[0].children[j].rotation += 0.01
+				for(let k = 0; k < this.worldContainer.children[0].children[j].children.length; k++){
+					this.worldContainer.children[0].children[j].children[k].rotation += 45 * (Math.PI / 180 )
+					this.worldContainer.children[0].children[j].onChildrenChange(0)
+				}
 			}
-			this.worldContainer.children[0].onChildrenChange(0)
+			
 		}
 
 		if(updateRotations)
@@ -410,16 +416,16 @@ class SpriteStack{
 
 		//swap stack
 		if(this.keyState['g']){
-			for(let k = 0; k < this.stacks.length; k++){
+			for(let k = 0; k < this.spriteStacks.length; k++){
 				// let newFrames = PIXI.loader.resources["the4"].textures
 				let newFrames = PIXI.loader.resources[
 					Object.keys(PIXI.loader.resources)[
 					Math.floor(Math.random() * Object.keys(PIXI.loader.resources).length)]
 				].textures
 
-				let randStackIndex = Math.floor(Math.random() * this.stacks.length)
-				// let randStack = this.stacks[randStackIndex]
-				let randStack = this.stacks[k]
+				let randStackIndex = Math.floor(Math.random() * this.spriteStacks.length)
+				// let randStack = this.spriteStacks[randStackIndex]
+				let randStack = this.spriteStacks[k]
 
 				let sprIter = 0
 				for(let i in newFrames){
@@ -535,14 +541,29 @@ class SpriteStack{
 			this.keyState['zoomOut'] = false
 		}
 
-		// this.mouseSprite.x = this.mouseX
-		// this.mouseSprite.y = this.mouseY
 
 		var point = new PIXI.Point(this.mouseX, this.mouseY)
 		// console.log(this.worldContainer.toLocal(point))
 
-		// this.mouseSprite.x = this.worldContainer.toLocal(point).x
-		// this.mouseSprite.y = this.worldContainer.toLocal(point).y
+		let worldMouseX = this.worldContainer.toLocal(point).x
+		let worldMouseY = this.worldContainer.toLocal(point).y
+
+		let mouseTileX = Math.floor((worldMouseX + (this.tileSize / 2)) / this.tileSize)
+		let mouseTileY = Math.floor((worldMouseY + (this.tileSize / 2)) / this.tileSize)
+
+		
+
+		if(this.keyState["click"]){
+			if(this.map[mouseTileX] !== undefined
+				&& this.map[mouseTileX][mouseTileY] !== undefined)
+			{
+				console.log(this.map[mouseTileX][mouseTileY])
+				//do somethin
+			}
+			
+
+			this.keyState["click"] = false
+		}
 	}
 }
 
