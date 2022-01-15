@@ -15,6 +15,6 @@
     "pixi.js": "^4.6.2",
     "pngjs": "^3.3.1",
     "recursive-readdir": "^2.2.1",
-    "shelljs": "^0.7.8"
+    "shelljs": "^0.8.5"
   }
 }
